@@ -1,0 +1,37 @@
+name: Run research sample demonstration
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare-samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install research data tools
+        run: python -m pip install -r research/landslide-segmentation/requirements.txt
+      - name: Download, verify and preview two training examples
+        run: python research/landslide-segmentation/prepare_resources.py --preview
+      - name: Publish preview and verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: landslide-research-demo
+          path: |
+            research/landslide-segmentation/downloads/sample_preview.png
+            research/landslide-segmentation/downloads/download_report.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Explain demonstration results
+        run: |
+          echo '## Research sample demonstration' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Downloaded two Landslide4Sense training image/mask pairs, verified SHA-256 hashes, and checked array shapes, finite values and binary labels.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Download the landslide-research-demo artifact for the PNG preview and JSON verification report. Artifacts are retained for 30 days.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'The mask is a supplied annotation, not a model prediction. No model was trained; this is not a Maharashtra susceptibility map.' >> "$GITHUB_STEP_SUMMARY"

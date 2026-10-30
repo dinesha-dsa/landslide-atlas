@@ -2,6 +2,35 @@
 
 Prepared 30 October 2026 for Dinesh Auti and collaborators.
 
+## See and run the new addition
+
+This module adds a data preparation demonstration and research plan to the atlas repository. It does not add a new trained model to the state/district dashboard.
+
+![Training example: RGB imagery, supplied landslide annotation and slope](example_preview.png)
+
+**How to read the image:** left is satellite RGB; middle is the provided binary landslide mask (white = mapped landslide); right is the supplied slope channel. This is a training example, not a prediction or a Maharashtra map. Figure source: Landslide4Sense, [dataset DOI 10.5281/zenodo.10463239](https://doi.org/10.5281/zenodo.10463239), CC BY 4.0; training sample 1 from the pinned IBM-NASA mirror. Our preparation code selects RGB bands, applies a per-band 2–98% display stretch and renders the annotation/slope. Preserve this attribution when sharing the figure.
+
+### Run on GitHub without a local Python installation
+
+1. Open [Run research sample demonstration](https://github.com/dinesha-dsa/landslide-atlas/actions/workflows/research-demo.yml).
+2. Select **Run workflow**, choose `main`, and confirm **Run workflow**. Write access is required; scholars without it can fork this repository and run the same workflow in their fork.
+3. Open the resulting run and its **prepare-samples** job to watch the installation and data checks.
+4. Once successful, download **landslide-research-demo** under **Artifacts** on the run page. It contains `sample_preview.png` and `download_report.json`. Artifact downloads require GitHub sign-in and expire after 30 days; rerun to regenerate them.
+
+The workflow downloads only two small training examples (~3.7 MB), validates checksums and labels, and generates the image above. It does not download the full dataset, install a deep learning framework, or train U-Net. GitHub Actions availability and usage limits depend on the account and repository settings.
+
+### What each new file does
+
+| File | Purpose |
+|---|---|
+| `prepare_resources.py` | Downloads the examples, checks hashes and array contents, and renders a preview |
+| `requirements.txt` | Records tested Python dependencies |
+| `resources.json` | Pins sample URLs, checksums, PDF links and upstream code revision |
+| `full_dataset_download_links.json` | Lists full dataset files, sizes and provider checksums |
+| `VALIDATION.md` | Records completed checks and the research work still outstanding |
+| `example_preview.png` | Shows actual supplied training data and annotation |
+| `.github/workflows/research-demo.yml` (repository root) | Runs the sample demonstration on GitHub Actions |
+
 ## What can be implemented
 
 Jiang, Ma and Mei (2026), *Deep learning for potential landslide identification: data, models, applications, challenges, and opportunities*, is a review, not one reproducible model. Its availability statements provide no original research data or software. Select and reproduce one of the underlying methods, then evaluate a clearly defined extension. The existing India review manuscript has not been edited by preparing this pack.

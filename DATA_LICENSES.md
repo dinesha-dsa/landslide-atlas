@@ -32,6 +32,8 @@ Generated figures include a brief attribution and embedded provenance; cite the 
 
 ## Excluded materials
 
+An attributed, derived Landslide4Sense training-example preview is included at `research/landslide-segmentation/example_preview.png` under the dataset's CC BY 4.0 terms. It displays sample 1 from the pinned IBM-NASA mirror, with RGB display stretching and supplied mask/slope channels; see the module README for source, transformations and interpretation. It is not model output. The original HDF5 sample files remain excluded from Git.
+
 The [segmentation research module](research/landslide-segmentation/README.md) links to Landslide4Sense (Zenodo DOI 10.5281/zenodo.10463239, CC BY 4.0), its IBM-NASA sample mirror at a pinned revision, HR-GLDD (DOI 10.5281/zenodo.7189381, CC BY 4.0), and original research papers. Downloaded samples, PDFs and upstream code archives are ignored and are not bundled in this repository. Cite dataset and paper authors and preserve the original terms. The official Landslide4Sense baseline code has its own MIT license, retained in its downloadable archive. CAS is linked as a further resource; its complete files and license have not been audited here. The repository MIT license covers our preparation code and guide, not third-party data or papers.
 
 The unpublished review manuscript, co-author contact details, journal PDFs, GSI-attributed mirror records, exact pilot training points and trained model are deliberately excluded from this repository. The pilot section reports aggregate exploratory results with limitations; it does not distribute a national model or substitute NASA reports for its original inventory.

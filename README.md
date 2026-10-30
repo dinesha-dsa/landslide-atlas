@@ -9,6 +9,8 @@ A GitHub Pages static dashboard with India state/UT and district selection, attr
 
 See [the landslide segmentation research module](research/landslide-segmentation/README.md) for a reproducible sample downloader, verified image/mask checks, research-paper PDF links, official baseline code access, full-dataset manifests and a proposed Maharashtra evaluation protocol.
 
+Run [the research sample demonstration on GitHub Actions](https://github.com/dinesha-dsa/landslide-atlas/actions/workflows/research-demo.yml) to generate a training-example preview and verification report without installing Python locally. The module guide includes an attributed example image and instructions for running it in a fork.
+
 This module helps scholars begin a Landslide4Sense/U-Net reproduction. It provides data preparation and study guidance; no deep learning model has been trained or evaluated here. Segmentation of visible landslide footprints does not establish future susceptibility or warning performance. The module runs locally in Python and is separate from the dashboard's exploratory Raigad pilot.
 
 ## What works
