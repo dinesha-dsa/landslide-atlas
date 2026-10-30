@@ -1,4 +1,4 @@
-import {SCHEMA,STORAGE_KEY,safeUrl,normalizeRecord,filterRecords,counts,toCSV,parseCSV,assignRegion,geometryBounds,gridCounts,modelCoverage} from './core.js';
+import {SCHEMA,STORAGE_KEY,safeUrl,normalizeRecord,filterRecords,counts,toCSV,parseCSV,assignRegion,geometryBounds,gridCounts,modelCoverage} from './core.js?v=coverage-20261030';
 const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
 const app={records:[],local:[],notes:{},states:[],districts:[],manifest:null,regions:null,selected:[],page:0,active:null,view:null};
 const cols=['id','title','latitude','longitude','state','district','date','trigger','category','source_name','source_url','license','citation','location_accuracy','verification','boundary_assignment'];
