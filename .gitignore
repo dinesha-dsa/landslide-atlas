@@ -1,4 +1,6 @@
 .cache/
+private/
+*.joblib
 node_modules/
 __pycache__/
 *.pyc

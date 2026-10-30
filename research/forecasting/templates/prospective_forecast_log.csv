@@ -1,0 +1,1 @@
+forecast_id,model_version,data_manifest_sha256,unit_id,issue_utc,target_end_utc,prediction_available_utc,probability,threshold,decision,input_cutoff_utc,input_completeness,status,immutable_archive_reference

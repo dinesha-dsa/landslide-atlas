@@ -1,0 +1,243 @@
+{
+  "synthetic": true,
+  "forecasting_skill_validated": false,
+  "interpretation": "Synthetic software check; no Maharashtra performance claim.",
+  "features": [
+    "slope_deg",
+    "rain_24h_mm",
+    "rain_72h_mm",
+    "rain_168h_mm"
+  ],
+  "threshold_policy": "Validation-only minimum 5*FN + FP; illustrative research utility, not an approved operational warning policy.",
+  "seed": 42,
+  "partitions": {
+    "train": 500,
+    "validation": 500,
+    "test": 500
+  },
+  "models": {
+    "logistic": {
+      "n": 500,
+      "events": 56,
+      "threshold": 0.2601368055477185,
+      "roc_auc": 0.7530566280566281,
+      "average_precision": 0.32849566525593554,
+      "brier_score": 0.09049160503183751,
+      "precision": 0.29310344827586204,
+      "recall": 0.30357142857142855,
+      "false_positive_rate": 0.09234234234234234,
+      "tp": 17,
+      "fp": 41,
+      "tn": 403,
+      "fn": 39,
+      "uncertainty": {
+        "status": "computed",
+        "method": "Storm-group percentile bootstrap, fixed trained model and validation threshold; excludes training uncertainty.",
+        "replicates": 200,
+        "groups": 20,
+        "intervals_95": {
+          "average_precision": [
+            0.21257777553916174,
+            0.495881917768492
+          ],
+          "brier_score": [
+            0.07074285215827918,
+            0.11030919231054578
+          ],
+          "recall": [
+            0.17470663265306122,
+            0.4101833842734094
+          ],
+          "false_positive_rate": [
+            0.059064612888156766,
+            0.125571041733036
+          ]
+        }
+      }
+    },
+    "random_forest": {
+      "n": 500,
+      "events": 56,
+      "threshold": 0.10978307496628367,
+      "roc_auc": 0.7368886743886744,
+      "average_precision": 0.33844556163254236,
+      "brier_score": 0.09020328438558387,
+      "precision": 0.21965317919075145,
+      "recall": 0.6785714285714286,
+      "false_positive_rate": 0.30405405405405406,
+      "tp": 38,
+      "fp": 135,
+      "tn": 309,
+      "fn": 18,
+      "uncertainty": {
+        "status": "computed",
+        "method": "Storm-group percentile bootstrap, fixed trained model and validation threshold; excludes training uncertainty.",
+        "replicates": 200,
+        "groups": 20,
+        "intervals_95": {
+          "average_precision": [
+            0.21313673250963036,
+            0.47942055223883956
+          ],
+          "brier_score": [
+            0.0718350980250406,
+            0.1104096776120107
+          ],
+          "recall": [
+            0.5249184782608696,
+            0.8039454806312769
+          ],
+          "false_positive_rate": [
+            0.2588598515248796,
+            0.3520410182010024
+          ]
+        }
+      }
+    },
+    "hist_gradient_boosting": {
+      "n": 500,
+      "events": 56,
+      "threshold": 0.18698100427865696,
+      "roc_auc": 0.6963280244530244,
+      "average_precision": 0.25277303213794733,
+      "brier_score": 0.09749524196884574,
+      "precision": 0.2926829268292683,
+      "recall": 0.42857142857142855,
+      "false_positive_rate": 0.13063063063063063,
+      "tp": 24,
+      "fp": 58,
+      "tn": 386,
+      "fn": 32,
+      "uncertainty": {
+        "status": "computed",
+        "method": "Storm-group percentile bootstrap, fixed trained model and validation threshold; excludes training uncertainty.",
+        "replicates": 200,
+        "groups": 20,
+        "intervals_95": {
+          "average_precision": [
+            0.16731680287475678,
+            0.39066378866104473
+          ],
+          "brier_score": [
+            0.07704642327225433,
+            0.11976353282215564
+          ],
+          "recall": [
+            0.26160714285714287,
+            0.5501844262295082
+          ],
+          "false_positive_rate": [
+            0.09315996503496504,
+            0.16857377023948777
+          ]
+        }
+      }
+    },
+    "rainfall_only": {
+      "n": 500,
+      "events": 56,
+      "threshold": 0.12128256396319005,
+      "roc_auc": 0.7642374517374517,
+      "average_precision": 0.3489027110357309,
+      "brier_score": 0.08711753989025348,
+      "precision": 0.24817518248175183,
+      "recall": 0.6071428571428571,
+      "false_positive_rate": 0.23198198198198197,
+      "tp": 34,
+      "fp": 103,
+      "tn": 341,
+      "fn": 22,
+      "uncertainty": {
+        "status": "computed",
+        "method": "Storm-group percentile bootstrap, fixed trained model and validation threshold; excludes training uncertainty.",
+        "replicates": 200,
+        "groups": 20,
+        "intervals_95": {
+          "average_precision": [
+            0.23649547290456852,
+            0.4980088812918654
+          ],
+          "brier_score": [
+            0.06973227732966437,
+            0.10535783564865547
+          ],
+          "recall": [
+            0.4727272727272727,
+            0.7145320197044336
+          ],
+          "false_positive_rate": [
+            0.16626378416407933,
+            0.299477588030676
+          ]
+        }
+      }
+    },
+    "terrain_only": {
+      "n": 500,
+      "events": 56,
+      "threshold": 0.22965661390506054,
+      "roc_auc": 0.5603281853281854,
+      "average_precision": 0.1317559523809524,
+      "brier_score": 0.10087543284756181,
+      "precision": 0.14,
+      "recall": 0.25,
+      "false_positive_rate": 0.19369369369369369,
+      "tp": 14,
+      "fp": 86,
+      "tn": 358,
+      "fn": 42,
+      "uncertainty": {
+        "status": "computed",
+        "method": "Storm-group percentile bootstrap, fixed trained model and validation threshold; excludes training uncertainty.",
+        "replicates": 200,
+        "groups": 20,
+        "intervals_95": {
+          "average_precision": [
+            0.09851932624113476,
+            0.17488394736842106
+          ],
+          "brier_score": [
+            0.08011418794219476,
+            0.12306173774463337
+          ],
+          "recall": [
+            0.14726154992548435,
+            0.3392205957883924
+          ],
+          "false_positive_rate": [
+            0.17971759423372327,
+            0.20614988558352404
+          ]
+        }
+      }
+    },
+    "training_prevalence": {
+      "n": 500,
+      "events": 56,
+      "threshold": 0.5,
+      "roc_auc": 0.5,
+      "average_precision": 0.112,
+      "brier_score": 0.09959999999999997,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "tn": 444,
+      "fn": 56
+    }
+  },
+  "input_table_sha256": "23ccae40a5a0ca370d60e949ece47a26f55946322dfa9621257bc1107138e278",
+  "environment": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2"
+  },
+  "limitations": [
+    "No prospective validation",
+    "Bootstrap excludes model-fitting and inventory uncertainty",
+    "No spatial-transfer evaluation in this temporal benchmark",
+    "No latency-aware weather-forecast predictors ingested"
+  ]
+}

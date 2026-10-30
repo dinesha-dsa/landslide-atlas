@@ -1,0 +1,1 @@
+event_id,unit_id,geometry_file,event_start_utc,event_end_utc,reported_utc,verified_available_utc,landslide_type,trigger,source_url,source_license,positional_uncertainty_m,time_precision,review_status,reviewer_code,duplicate_group,notes

@@ -1,0 +1,80 @@
+{
+  "updated_utc": "2026-10-30T17:10:08.191013+00:00",
+  "scientific_validation_complete": false,
+  "audit": {
+    "generated_utc": "2026-10-30T17:10:08.191013+00:00",
+    "source": "NASA COOLR atlas snapshot; not an authoritative complete event inventory",
+    "source_sha256": "89c945a83cd2dc766e72d0d46f6f78f7ea6be7c5da102bf9c3ed256659b3b6b3",
+    "india_reports": 1741,
+    "maharashtra_reports": 79,
+    "pilot_rectangle_reports": 6,
+    "maharashtra_dated_reports": 79,
+    "independently_verified_forecast_labels": 0,
+    "missing_for_forecasting": [
+      "time-bounded verified events",
+      "mapped slope units",
+      "systematic survey coverage",
+      "reviewed non-event periods",
+      "data availability times"
+    ],
+    "counts_are_reports_not_deduplicated_events": true
+  },
+  "priorities": [
+    {
+      "id": 1,
+      "title": "Verified event inventory",
+      "status": "Audit ready; verification pending",
+      "started": "Real report audit, candidate review CSV and event/coverage templates.",
+      "next": "Source review, deduplication, mapped units and bounded event timing.",
+      "resource": "outputs/inventory"
+    },
+    {
+      "id": 2,
+      "title": "Historical rainfall",
+      "status": "Feature builder ready; measurements pending",
+      "started": "Availability-aware 24/72/168-hour features; existing IMERG access check.",
+      "next": "Authorized numerical history, slope-unit extraction and gauge comparisons.",
+      "resource": "README.md#real-data-workflow"
+    },
+    {
+      "id": 3,
+      "title": "Explicit forecast target",
+      "status": "Draft protocol; team approval pending",
+      "started": "24-hour shallow-landslide target, UTC timing and unknown-outcome rules.",
+      "next": "Approved study units, observation process and frozen protocol.",
+      "resource": "PROTOCOL.md"
+    },
+    {
+      "id": 4,
+      "title": "Comparison models",
+      "status": "Synthetic software run only",
+      "started": "Terrain/rainfall baselines, combined logistic, Random Forest and gradient boosting.",
+      "next": "Eligible real data and a locally tested rainfall-threshold comparator.",
+      "resource": "outputs/synthetic-demo"
+    },
+    {
+      "id": 5,
+      "title": "Independent evaluation",
+      "status": "Guards and metrics ready; field skill untested",
+      "started": "Chronological and storm-group checks, validation-only thresholds, grouped confidence intervals.",
+      "next": "Untouched seasons/geography and prospective shadow evaluation.",
+      "resource": "PROTOCOL.md#development-and-independent-evaluation"
+    },
+    {
+      "id": 6,
+      "title": "Field observations",
+      "status": "Planning pack ready; no installation",
+      "started": "Site screening, sensor QA and survey/maintenance recording templates.",
+      "next": "Qualified assessment, permissions, equipment and actual monitoring.",
+      "resource": "FIELDWORK.md"
+    },
+    {
+      "id": 7,
+      "title": "Reproducible research",
+      "status": "Code and CI ready; scientific release pending",
+      "started": "Versioned templates, seeded demo, input checksums, environment records and CI artifact.",
+      "next": "Reviewed real-data/model release and independent reproduction.",
+      "resource": "WORKPLAN.md"
+    }
+  ]
+}

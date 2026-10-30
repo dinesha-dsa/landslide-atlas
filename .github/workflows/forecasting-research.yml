@@ -1,0 +1,27 @@
+name: Forecasting research checks
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/forecasting/**'
+      - 'tests/test_forecasting.py'
+      - '.github/workflows/forecasting-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r research/forecasting/requirements.txt
+      - run: python -m unittest discover -s tests -p 'test_forecast*.py'
+      - run: python research/forecasting/pipeline.py audit --output research-output/inventory
+      - run: python research/forecasting/pipeline.py demo --output research-output/synthetic-demo
+      - uses: actions/upload-artifact@v4
+        with:
+          name: forecasting-research-audit-and-synthetic-demo
+          path: research-output

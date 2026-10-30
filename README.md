@@ -99,3 +99,7 @@ Obtain an authoritative dated landslide inventory and survey footprint; collect 
 
 The [Raigad satellite module](research/satellite-feeds/README.md) adds official NASA IMERG and Sentinel-1 SLC catalogue checks, timestamped provenance, and optional authorized rainfall-file import. Open **Satellite inputs** in the dashboard. It is a fixed pilot rectangle, independent of explorer filters. No forecasting skill or radar-derived displacement is claimed. Rainfall download authentication and missing measurements are shown explicitly. A manual Actions workflow produces a refresh artifact for review; it does not update the website automatically.
 
+# Seven-priority forecasting research programme
+
+Open **Research plan** in the dashboard or the [forecasting starter](research/forecasting/README.md). Development has started across inventory verification, historical rainfall, a defined target, baselines, independent evaluation, field planning and reproducibility. The executed inventory audit identifies 79 Maharashtra candidate reports (6 in the pilot rectangle), with zero independently verified forecast labels. The separate 1,500-row synthetic benchmark checks software only. Field monitoring and validated Maharashtra forecasts remain pending. Use the included templates, draft protocol and manual GitHub research workflow to continue.
+

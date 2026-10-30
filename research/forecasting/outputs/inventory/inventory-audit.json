@@ -1,0 +1,18 @@
+{
+  "generated_utc": "2026-10-30T17:10:08.191013+00:00",
+  "source": "NASA COOLR atlas snapshot; not an authoritative complete event inventory",
+  "source_sha256": "89c945a83cd2dc766e72d0d46f6f78f7ea6be7c5da102bf9c3ed256659b3b6b3",
+  "india_reports": 1741,
+  "maharashtra_reports": 79,
+  "pilot_rectangle_reports": 6,
+  "maharashtra_dated_reports": 79,
+  "independently_verified_forecast_labels": 0,
+  "missing_for_forecasting": [
+    "time-bounded verified events",
+    "mapped slope units",
+    "systematic survey coverage",
+    "reviewed non-event periods",
+    "data availability times"
+  ],
+  "counts_are_reports_not_deduplicated_events": true
+}

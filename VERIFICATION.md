@@ -23,3 +23,11 @@ NASA GES DISC IMERG Early V07 directory listing succeeded; numerical download pr
 
 Validation: four Python tests cover half-open half-hour timing, midnight rollover, rate/depth conversion, fill masking, all-missing handling, unknown units and future intervals. Eight Node test groups cover existing explorer behaviour and timestamp freshness display. HDF5 tests use synthetic fixtures only; the import has not yet been validated on an authorized real IMERG granule. Local browser inspection confirmed source status rendering and readable responsive layout. The public JSON includes source-query URLs and hashes, acquisition/publication times for radar, and the rainfall download access outcome. Refresh is manual, not an operational monitoring service.
 
+# Seven-priority development start (2026-10-30)
+
+Executed a source-checksummed audit of all 1,741 bundled NASA COOLR reports: 79 Maharashtra reports, all with a reported date, and 6 inside the fixed pilot rectangle. These remain unverified candidate reports, not deduplicated authoritative events or eligible forecast labels. Saved the candidate CSV, audit JSON and a year-count SVG; no hazard trend is inferred.
+
+Executed a separately labelled synthetic benchmark of 1,500 unit-day examples, with explicit 2021 training, 2022 validation and 2023 test roles and storm groups kept within partitions. Compared terrain-only/rainfall-only logistic baselines, combined logistic, Random Forest, histogram gradient boosting and training prevalence. Saved synthetic inputs, predictions, metrics, grouped confidence intervals, environment/input fingerprints and a reliability SVG. No Maharashtra model was trained. No field sensor installation, external communications or new data agreements occurred.
+
+Nine forecasting tests passed: temporal feature integration, source availability cutoffs, missing/overlapping/incomplete rainfall, invalid rainfall, valid partitions, grouped-event leakage, unverified outcomes, late training outcomes, validation threshold choice and duplicate issue rejection. Existing Node tests also pass. Browser QA verified seven cards, no horizontal overflow at the narrow preview size, and explicit synthetic-only figure labelling. The draft protocol is not preregistered; it still needs team/domain approval, real verified outcomes, an external geography design and prospective monitoring.
+
