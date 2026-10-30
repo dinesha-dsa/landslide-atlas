@@ -1,6 +1,9 @@
 # Landslide Atlas — India research workspace
 
-A GitHub Pages-ready static dashboard with India state/UT and district selection, attributable NASA COOLR report points, local observations and notes, and reproducible research figures.
+**Live dashboard:** https://dinesha-dsa.github.io/landslide-atlas/  
+**Source repository:** https://github.com/dinesha-dsa/landslide-atlas
+
+A GitHub Pages static dashboard with India state/UT and district selection, attributable NASA COOLR report points, local observations and notes, and reproducible research figures.
 
 ## What works
 
@@ -34,7 +37,7 @@ Or `node --test tests/core.test.js` if npm is unavailable. The automated checks 
 
 ## Publish with GitHub Pages
 
-1. Create a repository named `landslide-research-atlas` in your GitHub account. Upload **this directory's contents only**, preserving `.github/workflows/pages.yml`. Do not upload the surrounding manuscript workspace.
+1. Create a repository named `landslide-atlas` in your GitHub account. Upload **this directory's contents only**, preserving `.github/workflows/pages.yml`. Do not upload the surrounding manuscript workspace.
 2. Use `main` as the default branch. In **Settings → Pages → Build and deployment**, choose **GitHub Actions** as the source.
 3. Push a change or manually run **Test and deploy research atlas** from the Actions tab. After successful deployment, use the Pages URL returned by GitHub. A repository URL by itself does not render HTML as a website.
 
@@ -44,7 +47,7 @@ The included workflow tests the code and uploads only `docs/`. It requires no pe
 git init -b main
 git add .
 git commit -m "Add source-linked landslide research atlas"
-gh repo create landslide-research-atlas --public --source . --remote origin --push
+gh repo create landslide-atlas --public --source . --remote origin --push
 ```
 
 Then enable the Pages Actions source in Settings. Repository creation and live deployment still require an authenticated GitHub account; do not claim a live URL until the deployment succeeds.

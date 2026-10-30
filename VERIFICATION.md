@@ -12,4 +12,4 @@ Checked locally on 30 October 2026.
 - Desktop rendering visually inspected. Responsive CSS is included; a separate mobile-device run has not been performed.
 - Public publication scope is this app directory only. Download caches, test output, credentials, manuscripts, author email records, journal PDFs and the third-party GSI mirror are excluded.
 
-GitHub Actions and the live Pages URL must be checked after publication. A prepared workflow alone is not a successful deployment. The source ledger preserves the upstream 736-declared / 735-downloaded district discrepancy.
+GitHub publication verified: the public repository contains the expected 20 files. The Actions test job passed; the deployed site and source manifest returned HTTP 200 at https://dinesha-dsa.github.io/landslide-atlas/. Live browser loading displayed the expected 79 Maharashtra reports. The source ledger preserves the upstream 736-declared / 735-downloaded district discrepancy.
