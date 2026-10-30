@@ -15,6 +15,8 @@ This module helps scholars begin a Landslide4Sense/U-Net reproduction. It provid
 
 ## What works
 
+- A red-highlighted future-prediction research objective, explicitly labelled as proposed and unvalidated, with pre-event data and independent temporal-testing requirements. Red emphasis marks the objective, not geographic hazard predictions.
+
 - A four-minute English video guide with synthetic narration, 24 caption cues, eight seekable chapters, a complete transcript and downloadable MP4/captions. Open **Video guide** in the dashboard navigation. The video explains evidence limits and the research demonstration; it is not model output.
 
 - State/UT and district selection using dated geoBoundaries geometry snapshots.
