@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-30T16:24:08.034173Z",
+  "aoi": {
+    "name": "Southern Raigad pilot rectangle",
+    "bbox": [
+      73.02,
+      17.8,
+      73.7,
+      18.6
+    ],
+    "crs": "EPSG:4326",
+    "scope": "Fixed pilot; independent of state/district explorer filters."
+  },
+  "forecast_validated": false,
+  "radar": {
+    "status": "available",
+    "query_url": "https://stac.dataspace.copernicus.eu/v1/search?collections=sentinel-1-slc&bbox=73.02%2C17.8%2C73.7%2C18.6&datetime=2026-08-31T16%3A24%3A08.034173Z%2F2026-10-30T16%3A24%3A08.034173Z&limit=12&sortby=-datetime",
+    "response_sha256": "dea2d2022e032e09d7957854ad48626730c2d372f635c020835995a326ba6762",
+    "retrieved_utc": "2026-10-30T16:24:08.034173Z",
+    "window_days": 60,
+    "record_limit": 12,
+    "more_results": false,
+    "records": [
+      {
+        "id": "S1D_IW_SLC__1SDV_20261024T010237_20261024T010309_005150_009C38_7BE2",
+        "acquired_utc": "2026-10-24T01:02:37.192714Z",
+        "published_utc": "2026-10-24T03:19:41.286245Z",
+        "platform": "sentinel-1d",
+        "relative_orbit": 34,
+        "orbit_direction": "descending",
+        "bbox": [
+          71.007599,
+          17.15851,
+          73.766212,
+          19.558172
+        ],
+        "metadata_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-1-slc/items/S1D_IW_SLC__1SDV_20261024T010237_20261024T010309_005150_009C38_7BE2"
+      },
+      {
+        "id": "S1D_IW_SLC__1SDV_20261019T005429_20261019T005457_005077_0099B3_F499",
+        "acquired_utc": "2026-10-19T00:54:29.839976Z",
+        "published_utc": "2026-10-19T09:47:38.107556Z",
+        "platform": "sentinel-1d",
+        "relative_orbit": 136,
+        "orbit_direction": "descending",
+        "bbox": [
+          73.043198,
+          17.050526,
+          75.737671,
+          19.166166
+        ],
+        "metadata_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-1-slc/items/S1D_IW_SLC__1SDV_20261019T005429_20261019T005457_005077_0099B3_F499"
+      },
+      {
+        "id": "S1D_IW_SLC__1SDV_20261012T010237_20261012T010309_004975_00963D_6934",
+        "acquired_utc": "2026-10-12T01:02:37.086741Z",
+        "published_utc": "2026-10-12T03:26:48.514780Z",
+        "platform": "sentinel-1d",
+        "relative_orbit": 34,
+        "orbit_direction": "descending",
+        "bbox": [
+          71.008202,
+          17.159328,
+          73.766579,
+          19.558102
+        ],
+        "metadata_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-1-slc/items/S1D_IW_SLC__1SDV_20261012T010237_20261012T010309_004975_00963D_6934"
+      },
+      {
+        "id": "S1D_IW_SLC__1SDV_20260930T010236_20260930T010309_004800_00901B_C56A",
+        "acquired_utc": "2026-09-30T01:02:36.921215Z",
+        "published_utc": "2026-09-30T03:32:24.043472Z",
+        "platform": "sentinel-1d",
+        "relative_orbit": 34,
+        "orbit_direction": "descending",
+        "bbox": [
+          71.008499,
+          17.158659,
+          73.766983,
+          19.558075
+        ],
+        "metadata_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-1-slc/items/S1D_IW_SLC__1SDV_20260930T010236_20260930T010309_004800_00901B_C56A"
+      },
+      {
+        "id": "S1D_IW_SLC__1SDV_20260925T005429_20260925T005457_004727_008D84_A997",
+        "acquired_utc": "2026-09-25T00:54:29.890883Z",
+        "published_utc": "2026-09-25T09:50:56.663443Z",
+        "platform": "sentinel-1d",
+        "relative_orbit": 136,
+        "orbit_direction": "descending",
+        "bbox": [
+          73.042961,
+          17.050234,
+          75.737358,
+          19.165705
+        ],
+        "metadata_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-1-slc/items/S1D_IW_SLC__1SDV_20260925T005429_20260925T005457_004727_008D84_A997"
+      },
+      {
+        "id": "S1D_IW_SLC__1SDV_20260918T010236_20260918T010309_004625_008A01_F4D6",
+        "acquired_utc": "2026-09-18T01:02:36.902556Z",
+        "published_utc": "2026-09-18T03:35:15.966841Z",
+        "platform": "sentinel-1d",
+        "relative_orbit": 34,
+        "orbit_direction": "descending",
+        "bbox": [
+          71.007668,
+          17.157928,
+          73.766258,
+          19.557747
+        ],
+        "metadata_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-1-slc/items/S1D_IW_SLC__1SDV_20260918T010236_20260918T010309_004625_008A01_F4D6"
+      },
+      {
+        "id": "S1D_IW_SLC__1SDV_20260913T005429_20260913T005457_004552_008782_7D33",
+        "acquired_utc": "2026-09-13T00:54:29.684628Z",
+        "published_utc": "2026-09-13T06:37:35.177872Z",
+        "platform": "sentinel-1d",
+        "relative_orbit": 136,
+        "orbit_direction": "descending",
+        "bbox": [
+          73.042747,
+          17.050228,
+          75.737259,
+          19.166067
+        ],
+        "metadata_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-1-slc/items/S1D_IW_SLC__1SDV_20260913T005429_20260913T005457_004552_008782_7D33"
+      },
+      {
+        "id": "S1D_IW_SLC__1SDV_20260906T010236_20260906T010309_004450_0083F6_6DDD",
+        "acquired_utc": "2026-09-06T01:02:36.448438Z",
+        "published_utc": "2026-09-06T05:39:01.041629Z",
+        "platform": "sentinel-1d",
+        "relative_orbit": 34,
+        "orbit_direction": "descending",
+        "bbox": [
+          71.008331,
+          17.157825,
+          73.766884,
+          19.557756
+        ],
+        "metadata_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-1-slc/items/S1D_IW_SLC__1SDV_20260906T010236_20260906T010309_004450_0083F6_6DDD"
+      },
+      {
+        "id": "S1D_IW_SLC__1SDV_20260901T005429_20260901T005457_004377_008165_EED2",
+        "acquired_utc": "2026-09-01T00:54:29.155799Z",
+        "published_utc": "2026-09-01T06:47:42.216315Z",
+        "platform": "sentinel-1d",
+        "relative_orbit": 136,
+        "orbit_direction": "descending",
+        "bbox": [
+          73.043365,
+          17.050083,
+          75.737854,
+          19.165945
+        ],
+        "metadata_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-1-slc/items/S1D_IW_SLC__1SDV_20260901T005429_20260901T005457_004377_008165_EED2"
+      }
+    ],
+    "measurements_processed": false
+  },
+  "rainfall": {
+    "status": "auth_required",
+    "catalogue_status": "available",
+    "catalogue_url": "https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGHHE.07/2026/303/",
+    "retrieved_utc": "2026-10-30T16:24:08.034173Z",
+    "granule": "3B-HHR-E.MS.MRG.3IMERG.20261030-S113000-E115959.0690.V07C.HDF5",
+    "download_url": "https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGHHE.07/2026/303/3B-HHR-E.MS.MRG.3IMERG.20261030-S113000-E115959.0690.V07C.HDF5",
+    "observation_start_utc": "2026-10-30T11:30:00Z",
+    "observation_end_utc": "2026-10-30T12:00:00Z",
+    "download_probe_http": 401,
+    "measurement": null,
+    "response_sha256": "f978d583c59f017336b12007b66d0a6248166ad99a3f85b2db65cc587684c855"
+  }
+}

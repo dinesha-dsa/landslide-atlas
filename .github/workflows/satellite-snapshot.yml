@@ -1,0 +1,20 @@
+name: Satellite catalogue snapshot
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r research/satellite-feeds/requirements.txt
+      - run: python -m unittest discover -s tests -p 'test_satellite*.py'
+      - run: python scripts/refresh_satellite_feeds.py --output satellite-feeds.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: satellite-catalogue-snapshot
+          path: satellite-feeds.json
