@@ -1,0 +1,10 @@
+.cache/
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.log
+test-output/
+*.zip
+PUBLISH_STATUS.local.json
