@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {filterRecords,counts,parseCSV,toCSV,csvCell,normalizeRecord,pointInGeometry,assignRegion,geometryBounds,gridCounts,safeUrl,validDate} from '../docs/core.js';
+import {filterRecords,counts,parseCSV,toCSV,csvCell,normalizeRecord,pointInGeometry,assignRegion,geometryBounds,gridCounts,safeUrl,validDate,modelCoverage} from '../docs/core.js';
 const row={title:'Field record',latitude:18,longitude:73,date:'2021-07-22',trigger:'rain',source_name:'Field team',source_url:'https://example.org/record',license:'Own observation'};
 test('year filters preserve explicit undated policy and regional intersection',()=>{
  const records=[{state:'A',district_id:'a',date:'2020-01-01',trigger:'rain'},{state:'A',district_id:'a',date:null,trigger:'rain'},{state:'B',district_id:'b',date:'2021-01-01',trigger:'rain'}];
@@ -41,4 +41,14 @@ test('published snapshot is internally consistent and contains no GSI mirror rec
  const districtIds=new Set(regions.districts.map(d=>d.id));assert(records.every(r=>!r.district_id||districtIds.has(r.district_id)));
  // Recompute sampled spatial assignments against the exact public geometry.
  for(const r of records.filter((_,i)=>i%43===0)){const assigned=assignRegion(r,states.features,districts.features);assert.equal(assigned.district_id,r.district_id,'Published point/boundary join mismatch: '+r.id);}
+});
+
+test('model availability never implies transfer beyond the southern Raigad pilot',()=>{
+ assert.equal(modelCoverage('').label,'No national model');
+ for(const state of ['Kerala','Uttarākhand','Unassigned']){assert.equal(modelCoverage(state).label,'No model for selection');assert.equal(modelCoverage(state).showPilot,false);}
+ assert.equal(modelCoverage('Mahārāshtra').label,'Pilot results only');
+ assert.equal(modelCoverage('Maharashtra','Raigarh').label,'Partial-area pilot');
+ assert.equal(modelCoverage('Mahārāshtra','Raigad').showPilot,true);
+ for(const district of ['Pune','Ratnagiri','Satara'])assert.equal(modelCoverage('Mahārāshtra',district).showPilot,false);
+ assert.equal(modelCoverage('Chhattisgarh','Raigarh').showPilot,false);
 });

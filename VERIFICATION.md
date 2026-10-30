@@ -2,7 +2,7 @@
 
 Checked locally on 30 October 2026.
 
-- Six Node.js test groups passed: filters and undated handling; coordinates/dates/provenance; CSV parsing and formula escaping; polygon holes and border ambiguity; grid count conservation; actual snapshot counts, IDs and sampled spatial joins.
+- Seven Node.js test groups passed: filters and undated handling; coordinates/dates/provenance; CSV parsing and formula escaping; polygon holes and border ambiguity; grid count conservation; actual snapshot counts, IDs and sampled spatial joins.
 - JavaScript syntax checks passed.
 - Browser verified: Maharashtra default resolves source diacritics; Maharashtra has 79 reports in this snapshot; the Maharashtra source district named Raigarh has eight; All India has 1,741.
 - A future-year selection produced the empty-data state after checking responsive input events.
@@ -13,3 +13,5 @@ Checked locally on 30 October 2026.
 - Public publication scope is this app directory only. Download caches, test output, credentials, manuscripts, author email records, journal PDFs and the third-party GSI mirror are excluded.
 
 GitHub publication verified: the public repository contains the expected 20 files. The Actions test job passed; the deployed site and source manifest returned HTTP 200 at https://dinesha-dsa.github.io/landslide-atlas/. Live browser loading displayed the expected 79 Maharashtra reports. The source ledger preserves the upstream 736-declared / 735-downloaded district discrepancy.
+
+Model-availability regression checked: Kerala and Pune show no model and hide the pilot panel; Maharashtra overall shows pilot results only; Raigarh shows a partial-area pilot; India overall shows no national model. This changes display and scope communication, not the underlying data or model coverage.

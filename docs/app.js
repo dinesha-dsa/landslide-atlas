@@ -1,4 +1,4 @@
-import {SCHEMA,STORAGE_KEY,safeUrl,normalizeRecord,filterRecords,counts,toCSV,parseCSV,assignRegion,geometryBounds,gridCounts} from './core.js';
+import {SCHEMA,STORAGE_KEY,safeUrl,normalizeRecord,filterRecords,counts,toCSV,parseCSV,assignRegion,geometryBounds,gridCounts,modelCoverage} from './core.js';
 const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
 const app={records:[],local:[],notes:{},states:[],districts:[],manifest:null,regions:null,selected:[],page:0,active:null,view:null};
 const cols=['id','title','latitude','longitude','state','district','date','trigger','category','source_name','source_url','license','citation','location_accuracy','verification','boundary_assignment'];
@@ -16,6 +16,7 @@ function refresh({fit=false}={}){
  const f=filters();if(f.from&&f.to&&f.from>f.to){notify('The start year must not be later than the end year.',true);return;}
  app.selected=filterRecords([...app.records,...app.local],f);app.page=0;app.active=null;$('record-detail').hidden=true;
  const d=app.regions.districts.find(x=>x.id===f.district),name=d?d.name+' · '+d.state:f.state||'India';$('region-title').textContent=name;
+ const coverage=modelCoverage(d?.state||f.state,d?.name||'');$('model-status').textContent=coverage.label;$('model-detail').textContent=coverage.detail;$('pilot-section').hidden=!coverage.showPilot;
  $('metric-records').textContent=app.selected.length.toLocaleString();const dates=app.selected.filter(r=>r.date).map(r=>r.date).sort();$('metric-dated').textContent=dates.length.toLocaleString();$('date-range').textContent=dates.length?dates[0].slice(0,4)+'–'+dates.at(-1).slice(0,4)+' · '+(app.selected.length-dates.length)+' undated':'No dated reports in selection';
  $('metric-local').textContent=app.selected.filter(r=>r.source_id==='local-contribution').length;$('session-count').textContent=app.local.length+' local observations · '+Object.keys(app.notes).length+' notes';
  if(fit||!app.view)fitMap();else renderMap();renderCharts();renderTable();

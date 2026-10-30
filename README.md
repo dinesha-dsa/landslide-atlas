@@ -15,7 +15,7 @@ A GitHub Pages static dashboard with India state/UT and district selection, attr
 - Filtered CSV and GeoJSON, a reproduction manifest, and import/export of a local research project JSON.
 - Source-required observation entry, CSV/Point-GeoJSON import, and notes on individual records. Contributions and notes persist in the same browser; they do not silently change source records.
 - A source ledger with download URLs, transformations, citations, boundary dates, licences and original-download SHA-256 hashes.
-- The original southern Raigad experiment's aggregate metrics, clearly separated from the public inventory explorer.
+- Selection-aware model availability: other states/districts explicitly show no trained model; all-India shows no national model. The southern Raigad pilot results appear only for Maharashtra overall or its Raigarh/Raigad district, with partial-area limits.
 
 ## Run locally
 

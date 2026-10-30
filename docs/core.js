@@ -1,5 +1,12 @@
 export const SCHEMA='landslide-atlas-project-v1';
 export const STORAGE_KEY='landslide-atlas-session-v1';
+export function modelCoverage(state,districtName=''){
+ const normalize=s=>String(s||'').normalize('NFD').replace(/\p{Diacritic}/gu,'').trim().toLowerCase();
+ if(!state)return {label:'No national model',detail:'Report explorer only; no India-wide susceptibility predictions.',showPilot:false};
+ if(normalize(state)==='maharashtra'&&!districtName)return {label:'Pilot results only',detail:'Southern Raigad experiment; no statewide susceptibility model.',showPilot:true};
+ if(normalize(state)==='maharashtra'&&['raigarh','raigad'].includes(normalize(districtName)))return {label:'Partial-area pilot',detail:'Southern Raigad results only; no district-wide susceptibility model.',showPilot:true};
+ return {label:'No model for selection',detail:'Report explorer only; no trained susceptibility model for this selection.',showPilot:false};
+}
 export function safeUrl(value){try{const u=new URL(value);return ['https:','http:'].includes(u.protocol)?u.href:null;}catch{return null;}}
 export function validDate(value){return typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&!Number.isNaN(Date.parse(value))&&new Date(value).toISOString().slice(0,10)===value;}
 export function normalizeRecord(r,id){
