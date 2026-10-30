@@ -1,0 +1,73 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.880
+Welcome to Landslide Atlas, an open research workspace for exploring landslide reports in India.
+
+00:00:07.230 --> 00:00:15.449
+This short guide explains how to select a region, inspect evidence, export figures, and begin a reproducible research experiment.
+
+00:00:15.799 --> 00:00:23.668
+The dashboard is an inventory explorer, not an operational warning system or a validated national susceptibility model.
+
+00:00:24.768 --> 00:00:30.463
+In the Explore section, choose a state or union territory, then a district.
+
+00:00:30.813 --> 00:00:39.562
+Use the event year and reported trigger filters to narrow the observation record. Decide whether to include reports without a usable date.
+
+00:00:39.912 --> 00:00:50.897
+Read the model availability message. The exploratory Raigad pilot covers only part of that district; selecting another region does not create a trained model there.
+
+00:00:51.997 --> 00:01:01.536
+Map points represent reported locations. Select a point or inspect a table entry to review its source, date, and location accuracy.
+
+00:01:01.886 --> 00:01:11.451
+The alternative grid view counts reports in each cell. A darker cell indicates more reports, not a higher estimated failure probability.
+
+00:01:11.801 --> 00:01:20.915
+Missing reports do not prove that an area is safe. Administrative boundaries also have documented source dates and naming limitations.
+
+00:01:22.015 --> 00:01:30.895
+The figures summarize dated reports, reported triggers, reporting geography, and the availability of selected evidence fields.
+
+00:01:31.245 --> 00:01:39.884
+Compare these as patterns in the observation record. Raw counts do not account for surveyed area, exposure, or reporting effort.
+
+00:01:40.234 --> 00:01:51.694
+Export a map or chart as S V G or P N G. Save the filtered C S V or Geo J S O N and the reproduction manifest so another researcher can identify the sources and filters.
+
+00:01:52.794 --> 00:02:02.914
+The Add observations section accepts a location and supporting source details. Record the source and reuse permission, and check the coordinates and date.
+
+00:02:03.264 --> 00:02:12.373
+Your observations and notes remain in this browser. They are not automatically uploaded to a shared database or verified as official records.
+
+00:02:12.723 --> 00:02:21.098
+Use Save project J S O N to back up the session and share it with collaborators, who can import that project into their own browser.
+
+00:02:22.198 --> 00:02:30.997
+The linked GitHub research module provides dataset sources, paper P D F links, preparation code, and an evaluation plan.
+
+00:02:31.347 --> 00:02:42.102
+Open its research sample demonstration under Actions, then select Run workflow. Scholars without write access can fork the repository and run it in their fork.
+
+00:02:42.451 --> 00:02:53.686
+The demonstration checks two Landslide for Sense training examples and produces an image and verification report. It prepares data; it does not train a deep learning model.
+
+00:02:54.786 --> 00:03:05.825
+The example image contains three panels: satellite imagery on the left, a supplied binary landslide annotation in the middle, and the provided slope channel on the right.
+
+00:03:06.175 --> 00:03:14.805
+White pixels in the annotation mark mapped landslide areas in this training sample. They are not predictions made by our software.
+
+00:03:15.155 --> 00:03:25.409
+This benchmark example is not a Maharashtra map. Cite the original Landslide for Sense dataset and preserve its attribution when reusing the example.
+
+00:03:26.509 --> 00:03:36.664
+For a Maharashtra study, obtain a dated local inventory and independently checked landslide boundaries, then align the satellite images and terrain inputs.
+
+00:03:37.014 --> 00:03:48.913
+Start with a published baseline, document the data split, and keep independent events or regions for evaluation. Report errors and uncertainty as well as aggregate scores.
+
+00:03:49.264 --> 00:04:03.293
+To claim future susceptibility or early warning, use only information available before the event and define the prediction period. The current research module is a starting point for that work, not a completed validation.

@@ -1,0 +1,10 @@
+{
+  "voice": "Microsoft Zira Desktop (synthetic English)",
+  "format": "1280x720 H.264/AAC, 5 fps",
+  "duration_seconds": 244.393,
+  "chapters": 8,
+  "caption_cues": 24,
+  "video_sha256": "dc1f0ba354794d3656be7a198e84c25586dff338578c8edbe9253629ad9bfa08",
+  "description": "Narrated explanatory slides; no live screen recording or model predictions.",
+  "dataset_figure": "Landslide4Sense sample 1, DOI 10.5281/zenodo.10463239, CC BY 4.0; RGB stretch and supplied annotation/slope."
+}

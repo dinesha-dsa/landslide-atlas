@@ -15,6 +15,8 @@ This module helps scholars begin a Landslide4Sense/U-Net reproduction. It provid
 
 ## What works
 
+- A four-minute English video guide with synthetic narration, 24 caption cues, eight seekable chapters, a complete transcript and downloadable MP4/captions. Open **Video guide** in the dashboard navigation. The video explains evidence limits and the research demonstration; it is not model output.
+
 - State/UT and district selection using dated geoBoundaries geometry snapshots.
 - A snapshot of 1,741 NASA COOLR India report points; event-year, undated-record and trigger filters.
 - An interactive geographic map with pan, zoom and a report-count grid. The grid is **not susceptibility**.
@@ -85,5 +87,9 @@ The manifest records the preparation time. Upstream URL and original-response ha
 See [DATA_LICENSES.md](DATA_LICENSES.md) and [the source ledger](docs/data/manifest.json). Code is MIT; NASA contributions and boundary datasets retain their own terms. In particular the adapted district boundary database remains under ODbL, separately from the application code.
 
 ## Next research steps
+
+### Maintain the narrated guide
+
+The published guide is `docs/media/research-tour.mp4` (about 2.4 MB). Chapter text is in `docs/media/research-tour.json`; timed captions, chapter metadata and provenance are alongside it. To rebuild on Windows with Microsoft Zira Desktop installed, install `Pillow` and `imageio-ffmpeg` in a separate Python environment, then run `python scripts/build_research_tour.py`. The script invokes Windows System.Speech through `scripts/generate_tour_voice.ps1`; it needs no external speech service or API key. Inspect slide layout, encoded duration, audio stream and captions after rebuilding. If chapter text/timing changes, update the static chapter controls and transcript in `docs/index.html` to match the generated metadata. Build intermediates remain in ignored `.cache/research-tour/`.
 
 Obtain an authoritative dated landslide inventory and survey footprint; collect pre-event covariates and field checks; evaluate whole-event and district holdouts; quantify calibration and decision benefit where identifiable. Shared backend storage, review roles and automated model execution would need a separate authenticated service. They are not provided by GitHub Pages or this version of the app.
