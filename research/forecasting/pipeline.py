@@ -46,9 +46,9 @@ def inventory_audit(output):
     counts=dates.dropna().dt.year.value_counts().sort_index()
     fig,ax=plt.subplots(figsize=(9,4.5),layout='constrained')
     ax.bar(counts.index,counts.values,color='#296c72')
-    ax.set(title='Maharashtra: dated reports in the bundled NASA COOLR snapshot',xlabel='Reported event year',ylabel='Reports (not deduplicated events)')
+    ax.set(title='Maharashtra: dated reports by year\nBundled NASA COOLR snapshot (incomplete reporting record)',ylabel='Reports (not deduplicated events)')
+    ax.set_xlabel('Reported event year\nCounts describe reports, not changes in landslide hazard.',fontsize=9)
     ax.spines[['top','right']].set_visible(False)
-    fig.text(.01,.005,'Incomplete reporting record; no trend in hazard or forecasting skill is inferred.',fontsize=8)
     fig.savefig(output/'inventory-report-years.svg');plt.close(fig)
     return summary
 
