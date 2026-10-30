@@ -1,0 +1,5 @@
+# Tested with Python 3.12. These dependencies prepare data; no training framework is installed.
+requests==2.34.2
+numpy==2.5.4
+h5py==3.16.0
+matplotlib==3.11.2

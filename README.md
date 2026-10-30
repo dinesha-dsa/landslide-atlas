@@ -5,6 +5,12 @@
 
 A GitHub Pages static dashboard with India state/UT and district selection, attributable NASA COOLR report points, local observations and notes, and reproducible research figures.
 
+## Research starter: deep learning and Maharashtra evaluation
+
+See [the landslide segmentation research module](research/landslide-segmentation/README.md) for a reproducible sample downloader, verified image/mask checks, research-paper PDF links, official baseline code access, full-dataset manifests and a proposed Maharashtra evaluation protocol.
+
+This module helps scholars begin a Landslide4Sense/U-Net reproduction. It provides data preparation and study guidance; no deep learning model has been trained or evaluated here. Segmentation of visible landslide footprints does not establish future susceptibility or warning performance. The module runs locally in Python and is separate from the dashboard's exploratory Raigad pilot.
+
 ## What works
 
 - State/UT and district selection using dated geoBoundaries geometry snapshots.

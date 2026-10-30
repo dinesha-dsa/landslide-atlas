@@ -1,0 +1,61 @@
+{
+  "sample_license": "CC BY 4.0; official dataset DOI 10.5281/zenodo.10463239",
+  "sample_revision": "4b291891badf301b5c75c2153f0f8fe00eeb1435",
+  "baseline_commit": "2df4c378cfc4a0feedf197826e769da520100d81",
+  "files": [
+    {
+      "path": "baseline/Landslide4Sense_upstream.zip",
+      "source": "https://api.github.com/repos/iarai/Landslide4Sense-2022/zipball/2df4c378cfc4a0feedf197826e769da520100d81",
+      "kind": "baseline"
+    },
+    {
+      "path": "samples/image_1.h5",
+      "source": "https://huggingface.co/datasets/ibm-nasa-geospatial/Landslide4sense/resolve/4b291891badf301b5c75c2153f0f8fe00eeb1435/images/train/image_1.h5",
+      "sha256": "05933f459b84368f046a6dacf4204528b470718754dd617dfb60755de50ecb6d",
+      "bytes": 1837056,
+      "kind": "sample"
+    },
+    {
+      "path": "samples/mask_1.h5",
+      "source": "https://huggingface.co/datasets/ibm-nasa-geospatial/Landslide4sense/resolve/4b291891badf301b5c75c2153f0f8fe00eeb1435/annotations/train/mask_1.h5",
+      "sha256": "5ab8737ab1c08d51ace62c5d02a21b78944baf6dbc6f942f71cc07696319f8b6",
+      "bytes": 18432,
+      "kind": "sample"
+    },
+    {
+      "path": "samples/image_2.h5",
+      "source": "https://huggingface.co/datasets/ibm-nasa-geospatial/Landslide4sense/resolve/4b291891badf301b5c75c2153f0f8fe00eeb1435/images/train/image_2.h5",
+      "sha256": "452d22e896e0c72ec10a08a21e8027fcc9f1a8f4759568af5ec25338dbef5178",
+      "bytes": 1837056,
+      "kind": "sample"
+    },
+    {
+      "path": "samples/mask_2.h5",
+      "source": "https://huggingface.co/datasets/ibm-nasa-geospatial/Landslide4sense/resolve/4b291891badf301b5c75c2153f0f8fe00eeb1435/annotations/train/mask_2.h5",
+      "sha256": "0c1d8fe37d35e8b1a33f618952292187962dfbd74d8a45770f7ff1d22132e364",
+      "bytes": 18432,
+      "kind": "sample"
+    },
+    {
+      "path": "papers/Jiang_2026_review.pdf",
+      "source": "https://nhess.copernicus.org/articles/26/487/2026/nhess-26-487-2026.pdf",
+      "sha256": "33d3d427fa715a667d02974c448986d1bb5b3eda066abbe347644059782be06e",
+      "bytes": 8601766,
+      "kind": "paper"
+    },
+    {
+      "path": "papers/HR_GLDD_2023.pdf",
+      "source": "https://essd.copernicus.org/articles/15/3283/2023/essd-15-3283-2023.pdf",
+      "sha256": "ca6450ef8823db043b20708fa1656414d8f4ab80419e2ffd8f226d57a0253a67",
+      "bytes": 9642165,
+      "kind": "paper"
+    },
+    {
+      "path": "papers/Landslide4Sense_2022_preprint.pdf",
+      "source": "https://arxiv.org/pdf/2206.00515",
+      "sha256": "c632de2769908227766a67f2a8c1155427d32ef0f6bc0cae3720ab80bcc1ff12",
+      "bytes": 25052650,
+      "kind": "paper"
+    }
+  ]
+}
